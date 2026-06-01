@@ -46,7 +46,7 @@ mowYard("Alex", () => {
         trimHedges("Alex", () => {
             collectWood("Alex", () => {
                 waterGarden("Alex", () => {
-                    console.log("🌟 Whew! Alex is finally done with all the chores!");
+                    console.log("Alex is finally done with all the chores!");
                 });
             });
         });
