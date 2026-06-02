@@ -34,19 +34,21 @@ function collectWood(personName, callback) {
 
 function waterGarden(personName, callback) {
     console.log(`${personName} is starting to water the garden...`);
+    
     setTimeout(() => {
-        console.log(`${personName.toUpperCase()} watered the garden.\n`);
+        console.log(`😴 Oh no! ${personName.toUpperCase()} fell fast asleep with the hose running!`);
+        
         callback(); 
+        
     }, 1200);
 }
-
 
 mowYard("Alex", () => {
     weedEatYard("Alex", () => {
         trimHedges("Alex", () => {
             collectWood("Alex", () => {
                 waterGarden("Alex", () => {
-                    console.log("Alex is finally done with all the chores!");
+                    console.log("The chore day was cut short because Alex is snoring.");
                 });
             });
         });
