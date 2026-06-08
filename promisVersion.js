@@ -49,19 +49,35 @@ function waterGarden(personName) {
     });
 }
 
-// 2. Create an async function to control the execution order
-async function startChoreDay() {
+
+function startChoreDay() {
     console.log("--- Chore Day Starts Now --- \n");
 
-    // The 'await' keyword pauses the code until that specific Promise resolves
-    await mowYard("Alex");
-    await weedEatYard("Alex");
-    await trimHedges("Alex");
-    await collectWood("Alex");
-    await waterGarden("Alex");
-
-    console.log("Alex is finally done with all the chores!");
+    
+    mowYard("Alex")
+        
+        .then(() => {
+            return weedEatYard("Alex");
+        })
+        .then(() => {
+            return trimHedges("Alex");
+        })
+        .then(() => {
+            return collectWood("Alex");
+        })
+        .then(() => {
+            return waterGarden("Alex");
+        })
+        .then(() => {
+            
+            console.log("Alex is finally done with all the chores!");
+        })
+        
+        .catch((sleepMessage) => {
+            console.log(sleepMessage);
+            console.log("❌ The chore day was cut short because Alex is snoring.");
+        });
 }
 
-// 3. Run the schedule
+// Run the schedule
 startChoreDay();
