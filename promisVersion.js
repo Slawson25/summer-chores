@@ -1,6 +1,6 @@
 
 function mowYard(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is starting to mow the yard...`);
         setTimeout(() => {
             console.log(`${personName.toUpperCase()} mowed the yard.\n`);
@@ -10,7 +10,7 @@ function mowYard(personName) {
 }
 
 function weedEatYard(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is starting to weedeat the yard...`);
         setTimeout(() => {
             console.log(`${personName.toUpperCase()} weedeated the yard.\n`);
@@ -20,7 +20,7 @@ function weedEatYard(personName) {
 }
 
 function trimHedges(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is started to trim the Hedges...`);
         setTimeout(() => {
             console.log(`${personName.toUpperCase()} trimed the Hedges.\n`);
@@ -30,7 +30,7 @@ function trimHedges(personName) {
 }
 
 function collectWood(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is going to collect wood...`);
         setTimeout(() => {
             console.log(`${personName.toUpperCase()} collected the wood.\n`);
@@ -40,7 +40,7 @@ function collectWood(personName) {
 }
 
 function waterGarden(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is starting to water the garden...`);
         setTimeout(() => {
             console.log(`${personName.toUpperCase()} watered the garden.\n`);

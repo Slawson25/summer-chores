@@ -1,7 +1,7 @@
 // --- Promise-based Functions ---
 
 function mowYard(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is starting to mow the yard...`);
 
         setTimeout(() => {
@@ -19,7 +19,7 @@ function mowYard(personName) {
 }
 
 function weedEatYard(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is starting to weedeat the yard...`);
 
         setTimeout(() => {
@@ -37,7 +37,7 @@ function weedEatYard(personName) {
 }
 
 function trimHedges(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is starting to trim the hedges...`);
 
         setTimeout(() => {
@@ -55,7 +55,7 @@ function trimHedges(personName) {
 }
 
 function collectWood(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is going to collect wood...`);
 
         setTimeout(() => {
@@ -73,7 +73,7 @@ function collectWood(personName) {
 }
 
 function waterGarden(personName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         console.log(`${personName} is starting to water the garden...`);
 
         setTimeout(() => {
